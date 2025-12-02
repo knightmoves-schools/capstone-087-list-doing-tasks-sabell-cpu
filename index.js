@@ -20,21 +20,23 @@ function drawCard(index, task){
 
 function drawTodoCards(){
     let output = '';
-    
     tasks.forEach((task, index) => {
-        output += drawCard(index, task)
+        if (task.status === 'todo') {
+            output += drawCard(index, task);
+        }
     });
-    
+
     return output;
 }
 
 function drawDoingCards(){
     let output = '';
-    
     tasks.forEach((task, index) => {
-        output += drawCard(index, task)
+        if (task.status === 'doing') {
+            output += drawCard(index, task);
+        }
     });
-    
+
     return output;
 }
 
