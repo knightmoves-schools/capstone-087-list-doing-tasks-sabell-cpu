@@ -41,9 +41,6 @@ function drawDoingCards(){
     
     return output;
 }
-
-function drawDoneCards(){
-    let output = '';
     
 document.getElementById('todo-cards').innerHTML = drawTodoCards();
 document.getElementById('doing-cards').innerHTML = drawDoingCards();
