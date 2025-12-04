@@ -56,15 +56,3 @@ function drawDoneCards(){
 
 document.getElementById('todo-cards').innerHTML = drawTodoCards();
 document.getElementById('doing-cards').innerHTML = drawDoingCards();
-document.getElementById('done-cards').innerHTML = drawDoneCards();
-
-document.getElementById('task-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const description = document.getElementById('task-description').value;
-    const status = document.getElementById('task-status').value;
-    tasks.push({description: description, status: status});
-    document.getElementById('task-description').value = '';
-    document.getElementById('todo-cards').innerHTML = drawTodoCards();
-    document.getElementById('doing-cards').innerHTML = drawDoingCards();
-    document.getElementById('done-cards').innerHTML = drawDoneCards();
-});
